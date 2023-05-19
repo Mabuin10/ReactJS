@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "name": "Avion - VOLANTEX RC Mini de 4 canales",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_651823-MLA49737435885_042022-O.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Planes",
+        "price": "25.000"
+    },
+    {
+        "id": "2",
+        "name": "Avion - Top Flyer de 2 canales",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_937631-MLA51337440704_082022-O.webp",
+        "stock": 3,
+        "descripcion": "**Falta completar**",
+        "Category": "Planes",
+        "price": "25.000"
+    },
+    {
+        "id": "3",
+        "name": "GoolRC-Heli RC",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_990416-MLA52334382608_112022-O.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Heli",
+        "price": "25.000"
+    },
+    {
+        "id": "4",
+        "name": "Helicoptero RC - EACHINE E129",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_691165-MLA50988851343_082022-O.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Heli",
+        "price": "25.000"
+    },
+    {
+        "id": "5",
+        "name": "Auto - Audi R8 LMS Rastar",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_772672-MLA31932408498_082019-O.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Cars",
+        "price": "25.000"
+    },
+    {
+        "id": "6",
+        "name": "Camion 4*4 - HAIBOXING",
+        "img": "https://m.media-amazon.com/images/I/817Ug-CvIIL._AC_SL1500_.jpg",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Cars",
+        "price": "25.000"
+    },
+    {
+        "id": "7",
+        "name": "Lancha Rc Alta Velocidad 70k/h",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_2X_743157-MLA54972937791_042023-F.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Boats",
+        "price": "25.000"
+    },
+    {
+        "id": "8",
+        "name": "Pro Boat Rc Blackjack 42 8s Brushless Catamaran Rtr",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_996681-MLA51472544085_092022-O.webp",
+        "stock": 5,
+        "descripcion": "**Falta completar**",
+        "Category": "Boats",
+        "price": "25.000"
+    }
+]
