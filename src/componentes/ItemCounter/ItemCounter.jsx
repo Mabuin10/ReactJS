@@ -1,10 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState} from "react"
+
 export const ItemCounter = ({ stock, onAdd }) => {
     const [counter, setCounter] = useState(0)
-
-    useEffect(() => {
-        if (counter > 0) onAdd(stock - counter)
-    }, [counter])
 
     const handlerIncreaseCount = () => {
         if (stock > counter) setCounter(counter + 1)
@@ -16,10 +13,15 @@ export const ItemCounter = ({ stock, onAdd }) => {
 
     return (
         <div>
-            <span onClick={handlerIncreaseCount}>+</span>
-            {counter}
-            <span onClick={handlerDecreaseCount}>-</span>
-            Stock Disponible a la fecha: {stock}
+            <div>
+                <button onClick={handlerIncreaseCount}>+</button>
+                <h3>{counter}</h3>
+                <button onClick={handlerDecreaseCount}>-</button>
+            </div>
+            <div>
+                <span>Stock Disponible: {stock}</span>
+                <button onClick={()=> onAdd(counter)} disabled={!stock}>Agregar al Carrito</button>
+            </div>
         </div>
     )
 }
