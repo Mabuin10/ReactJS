@@ -5,37 +5,35 @@ import { Link } from "react-router-dom";
 
 
 
-export const ItemDetail = ({ products }) => {
+export const ItemDetail = ({ items }) => {
     const  [quantityAdded, setQuantityAdded] = useState(0)
     
     const {addItem} = useContext(CartContext)
-
-    const handleOnAdd = (counter) => {
-        setQuantityAdded (counter)
-        
-        const item = {products}
-
-        addItem(item, counter)
+    const onAdd = (counter) => {
+        addItem(items, counter)
+        setQuantityAdded(counter)
+      
     }
+    
     return(
     <div>
         <header>
-            <h1>{products.name}</h1>
+            <h1>{items.title}</h1>
         </header>
         <picture>
-            <img src={products.img} alt={products.descripcion} />
+            <img src={items.img} alt={items.descripcion} />
         </picture>
         <div>
-            <p>Category: {products.category}</p>
-            <p>Description: {products.descripcion}</p>
-            <p>Precio: ${products.price}</p>
+            <p>Category: {items.category}</p>
+            <p>Description: {items.descripcion}</p>
+            <p>Precio: ${items.price}</p>
         </div>
         <footer>
             {
             quantityAdded > 0? (
                 <Link to="/cart">Terminar Compra</Link> 
             ):(
-            <ItemCounter stock={products.stock} onAdd={handleOnAdd}/>
+            <ItemCounter stock={items.stock} onAdd={onAdd}/>
             )}
 
         </footer>

@@ -1,39 +1,65 @@
-import { useState } from "react";
 import Container from "react-bootstrap/esm/Container"
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom"
+import { CartContext } from "../../Context/CartContext"
+import { useContext} from "react"
+
 
 export const Cart = () => {
-    const [formValues, setFormValues]=useState({
-        name:"",
-        number:"",
-        email:""
-    })
-    const handleChange = ev => {
-        setFormValues (prev => ({...prev, [ev.target.name]: ev.target.value,})
-    )}
+  
+  const { cart, removeItem, clearCart } = useContext(CartContext)
+
+  console.log(cart)
+
+  const Total = () => cart.reduce(
+    (acumulador, valorActual) =>
+    acumulador + valorActual.quantity * valorActual.price, 0
+  )
+   
+
+
     return (
     <Container>
         <h1>Lista de Productos</h1>
-        <div>Productos</div>
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Name</Form.Label>
-        <Form.Control onChange={handleChange} value={formValues.name} name="name" type="text" placeholder="Enter Name" />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Email</Form.Label>
-        <Form.Control onChange={handleChange} value={formValues.email} name="email" type="email" placeholder="email@email.com" />
-      </Form.Group>
-      
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Phone Number</Form.Label>
-        <Form.Control onChange={handleChange} value={formValues.number} name="number" type="text" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Finalizar Compra!
-      </Button>
-    </Form>
+        {!cart.length ? (
+          <p>Cart Empty</p>
+        ) : (
+          <div>
+            <table>
+              <tr>
+                <th>Nombre</th>
+                <th></th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th></th>
+              </tr>
+            </table>
+            <tbody>
+              {cart.map(item =>(
+                <tr key={item.id}>
+                  <td>{item.title}</td>
+                  <td>
+                    <img height={60} src={item.img} alt={item.title}/>
+                  </td>
+                  <td>{item.price}</td>
+                  <td>{item.quantity}</td>
+                  <td>
+                    <button onClick={() => removeItem(item.id)}>Delete</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+                <td>Total</td>
+                <td></td>
+                <td>{Total()}</td>
+            </tfoot>
+          </div>
+        )}
+        <div>
+          <button onClick = {clearCart} ></button>
+        </div>
+        <div>
+          <Link to="/Checkoutform">CheckOut</Link>
+        </div>
     </Container>
 )}

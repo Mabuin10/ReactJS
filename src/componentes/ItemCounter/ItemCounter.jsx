@@ -1,7 +1,7 @@
 import { useState} from "react"
 
-export const ItemCounter = ({ stock, onAdd }) => {
-    const [counter, setCounter] = useState(0)
+export const ItemCounter = ({ stock, onAdd, initial }) => {
+    const [counter, setCounter] = useState(initial ?? 0)
 
     const handlerIncreaseCount = () => {
         if (stock > counter) setCounter(counter + 1)
@@ -19,8 +19,8 @@ export const ItemCounter = ({ stock, onAdd }) => {
                 <button onClick={handlerDecreaseCount}>-</button>
             </div>
             <div>
-                <span>Stock Disponible: {stock}</span>
-                <button onClick={()=> onAdd(counter)} disabled={!stock}>Agregar al Carrito</button>
+                <span>Stock Disponible: {stock - counter}</span>
+                {!!counter && (<button onClick={()=> onAdd(counter)}>Agregar al Carrito</button>)}
             </div>
         </div>
     )
