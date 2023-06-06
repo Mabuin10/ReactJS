@@ -8,12 +8,10 @@ import { ItemList } from "../componentes/ItemList/ItemList.jsx";
 
 export const ItemListConteiner = ({ contenido }) => {
     const [list, setList] = useState([])
-    const [loading, setLoading] = useState(true)
 
     const { category } = useParams()
 
     useEffect(() => {
-        setLoading(true)
 
         const collectionRef = category
 
@@ -30,9 +28,6 @@ export const ItemListConteiner = ({ contenido }) => {
             })
             .catch(error => {
                 console.log(error)
-            })
-            .finally(() => {
-                setLoading(false)
             })
     })
         return (
