@@ -7,13 +7,11 @@ import { db } from "../../Services-Firebase/FirebaseConfig";
 
 export const ItemDetailContainer = ({onAdd}) => {
     const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
 
 
     const { id } = useParams()
     
     useEffect(() => {
-        setLoading(true)
 
         const itemRef = doc(db, 'items', id)
 
@@ -27,9 +25,7 @@ export const ItemDetailContainer = ({onAdd}) => {
             .catch(error => {
                 console.log(error)
             })
-            .finally(() => {
-                setLoading(false)
-            })
+            
     }, [id])
 
     return (

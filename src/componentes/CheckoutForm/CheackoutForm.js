@@ -13,9 +13,8 @@ export const CheckoutForm = () => {
 		email: "",
 	})
 
-    const {cart, clearCart} = useState(CartContext)
+    const {clearCart} = useState(CartContext)
 
-    const {total} = useState(Cart)
 
     const sendOrder = () => {
 		const order = {
@@ -27,7 +26,7 @@ export const CheckoutForm = () => {
 
 	addDoc(orderCollection, order).then(response => {
 			if (response.id) {
-				
+				clearCart
 				alert("Su orden: " + response.id + " ha sido completada!")
 			}
 		})
