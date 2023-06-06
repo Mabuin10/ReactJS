@@ -6,25 +6,17 @@ import { useContext} from "react"
 
 export const Cart = () => {
   
-  const { cart, removeItem, clearCart } = useContext(CartContext)
+  const { cart, removeItem, clearCart,Total } = useContext(CartContext)
 
-  console.log(cart)
-
-  const Total = () => cart.reduce(
-    (acumulador, valorActual) =>
-    acumulador + valorActual.quantity * valorActual.price, 0
-  )
-   
-
-
+  
     return (
     <Container>
         <h1>Lista de Productos</h1>
         {!cart.length ? (
           <p>Cart Empty</p>
         ) : (
-          <div>
-            <table>
+          <>
+            <thead>
               <tr>
                 <th>Nombre</th>
                 <th></th>
@@ -32,7 +24,7 @@ export const Cart = () => {
                 <th>Cantidad</th>
                 <th></th>
               </tr>
-            </table>
+            </thead>
             <tbody>
               {cart.map(item =>(
                 <tr key={item.id}>
@@ -51,12 +43,12 @@ export const Cart = () => {
             <tfoot>
                 <td>Total</td>
                 <td></td>
-                <td>{Total()}</td>
+                <td>{Total}</td>
             </tfoot>
-          </div>
+          </>
         )}
         <div>
-          <button onClick = {clearCart} ></button>
+          <button onClick = {clearCart} >Clear Out Cart</button>
         </div>
         <div>
           <Link to="/Checkoutform">CheckOut</Link>

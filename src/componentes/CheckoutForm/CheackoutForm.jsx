@@ -1,7 +1,6 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { getFirestore, collection, addDoc} from 'firebase/firestore'
 import { CartContext } from "../../Context/CartContext"
-import { Cart } from "../Cart/Cart"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 
@@ -10,15 +9,17 @@ export const CheckoutForm = () => {
     const [formValues, setFormValues] = useState({
 		name: "",
 		phone: "",
-		email: "",
+		email: ""
 	})
 
-    const {clearCart} = useState(CartContext)
+    const { clearCart, cart, Total } = useContext(CartContext)
 
 
     const sendOrder = () => {
 		const order = {
 			buyer: formValues,
+			items: cart,
+			total: Total(),
 		}
 
 		const db = getFirestore()
@@ -31,7 +32,7 @@ export const CheckoutForm = () => {
 			}
 		})
 	}
-
+	
 	const handleChange = ev => {
 		setFormValues(prev => ({
 			...prev,
