@@ -26,7 +26,7 @@ export const CheckoutForm = () => {
 
 	addDoc(orderCollection, order).then(response => {
 			if (response.id) {
-				clearCart
+				clearCart()
 				alert("Su orden: " + response.id + " ha sido completada!")
 			}
 		})
