@@ -1,0 +1,16 @@
+.card{
+    width: 24rem;
+}
+.card-img{
+    height: auto;
+    width: auto;
+}
+.card-title{
+    color:whitesmoke;
+}
+.card-text{
+    color:whitesmoke
+}
+.card-text-secondary{
+    color:whitesmoke
+}

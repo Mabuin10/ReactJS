@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route,} from "react-router-dom";
 import { CartProvider } from './Context/CartContext';
 import { CheckoutForm } from './componentes/CheckoutForm/CheackoutForm';
 
+
 function App() {
 
   const onAdd = stock => console.log("El stock Actual es " + stock)

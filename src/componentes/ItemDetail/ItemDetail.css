@@ -1,0 +1,52 @@
+.prodDetail header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgdetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: auto;
+    padding: 20px;
+}
+.imgdetail img{
+    border-radius: 50px;
+}
+.titleDetail{  
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: red
+    }
+
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 2px;
+    color:whitesmoke
+}
+.detail footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:whitesmoke
+}
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    background: red;
+    color: whitesmoke;
+}

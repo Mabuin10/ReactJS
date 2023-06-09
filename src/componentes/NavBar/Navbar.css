@@ -1,0 +1,17 @@
+a{
+    color:whitesmoke;
+    padding: 0 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+a.active{
+    color:red
+}
+a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.name{
+    color: red;
+    font-size:x-large;
+}

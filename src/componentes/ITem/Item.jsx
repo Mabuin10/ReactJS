@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Item.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -7,14 +8,14 @@ export const Item = ({ item }) => (
     <div className=''>
         <div className=''>
             <div className=''>
-                <Card key={item.id}>
-                    <Card.Img variant="top" src={item.img} />
-                    <Card.Body>
-                        <Card.Title>{item.title}</Card.Title>
-                        <Card.Text>{item.description}</Card.Text>
-                        <Card.Text>${item.price}</Card.Text>
+                <Card className='card' key={item.id}>
+                    <img className="card-img" variant="top" src={item.img} alt='img'></img>
+                    <Card.Body className='card-body'>
+                        <Card.Title className='card-title' >{item.title}</Card.Title>
+                        <Card.Text className='card-text'>{item.description}</Card.Text>
+                        <Card.Text className='card-text-secondary'>${item.price}</Card.Text>
                         <Link to= {`/item/${item.id}`}>
-                            <Button variant="primary">Ver Detalle</Button>
+                            <Button variant="danger">Ver Detalle</Button>
                         </Link>
                     </Card.Body>
                 </Card>

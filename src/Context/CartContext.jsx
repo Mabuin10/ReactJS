@@ -12,7 +12,6 @@ export const CartProvider = ({children}) => {
         const { stock, ...rest } = item
 
         const isInCart = cart.some(item => item.id === rest.id)
-        console.log(rest.id)
         if (!isInCart) 
             setCart(prev => [...prev, { ...rest, quantity},
             ])

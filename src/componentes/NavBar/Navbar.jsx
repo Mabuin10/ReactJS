@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Navbar.css'
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -19,11 +20,12 @@ export const NavBar = () => {
 
     return (
         <header>
-            <Navbar bg="primary" variant="dark">
-                    <Navbar.Brand href="#home">Hobby shop</Navbar.Brand>
-                    <Nav className="me-auto">
+            <Navbar bg="black" variant="dark">
+                    <NavLink className='name' to="/">Hobby Shop
+                    </NavLink>
+                    <Nav className="me-auto navigation">
                         <NavLink to="/" >Home</NavLink>
-                        {ItemsMenu?.map(item => <NavLink key={item} to={`category/${item}`}>{item.toUpperCase()} </NavLink>)}
+                        {ItemsMenu?.map(item => <NavLink key={item} to={`category/${item}`}>{item} </NavLink>)}
                     </Nav>
                     <CartWidget/>
             </Navbar>

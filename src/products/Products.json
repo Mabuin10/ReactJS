@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Rc Plane - VOLANTEX RC Mini de 4 canales",
+        "title": "Rc Plane - VOLANTEX RC Mini de 4 canales",
         "img": "https://http2.mlstatic.com/D_NQ_NP_651823-MLA49737435885_042022-O.webp",
         "stock": 12,
         "descripcion": "Super aerodynamic and fast plane, recomended for people with some experience",
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "name": "RC Plane - Top Flyer de 2 canales",
+        "title": "RC Plane - Top Flyer de 2 canales",
         "img": "https://http2.mlstatic.com/D_NQ_NP_937631-MLA51337440704_082022-O.webp",
         "stock": 15,
         "descripcion": "Ultralight and easy to hand plane, this is great to make your first steep enjoing rc planes",
@@ -19,7 +19,7 @@
     },
     {
         "id": "3",
-        "name": "GoolRC-Heli RC",
+        "title": "GoolRC-Heli RC",
         "img": "https://http2.mlstatic.com/D_NQ_NP_990416-MLA52334382608_112022-O.webp",
         "stock": 10,
         "descripcion": "Heli made for people how likes challenge and lot of fun",
@@ -28,7 +28,7 @@
     },
     {
         "id": "4",
-        "name": "Helicopter RC - EACHINE E129",
+        "title": "Helicopter RC - EACHINE E129",
         "img": "https://http2.mlstatic.com/D_NQ_NP_691165-MLA50988851343_082022-O.webp",
         "stock": 12,
         "descripcion": "Helicopter great to learn to handle this kind of machines",
@@ -37,7 +37,7 @@
     },
     {
         "id": "5",
-        "name": "Drift Car - Audi R8 LMS Rastar",
+        "title": "Drift Car - Audi R8 LMS Rastar",
         "img": "https://http2.mlstatic.com/D_NQ_NP_772672-MLA31932408498_082019-O.webp",
         "stock": 15,
         "descripcion": "Fast car to take the drift to the next level",
@@ -46,7 +46,7 @@
     },
     {
         "id": "6",
-        "name": "Truck 4*4 - HAIBOXING",
+        "title": "Truck 4*4 - HAIBOXING",
         "img": "https://m.media-amazon.com/images/I/817Ug-CvIIL._AC_SL1500_.jpg",
         "stock": 5,
         "descripcion": "All-Terrain RC truck, try it in the hardest terrain",
@@ -55,7 +55,7 @@
     },
     {
         "id": "7",
-        "name": "Boat Rc High Speed 70k/h",
+        "title": "Boat Rc High Speed 70k/h",
         "img": "https://http2.mlstatic.com/D_NQ_NP_2X_743157-MLA54972937791_042023-F.webp",
         "stock": 8,
         "descripcion": "Boat that make you feel the speed in the water, no easy to handle it",
@@ -64,7 +64,7 @@
     },
     {
         "id": "8",
-        "name": "Pro Boat Rc Blackjack 42 8s Brushless Catamaran Rtr",
+        "title": "Pro Boat Rc Blackjack 42 8s Brushless Catamaran Rtr",
         "img": "https://http2.mlstatic.com/D_NQ_NP_996681-MLA51472544085_092022-O.webp",
         "stock": 5,
         "descripcion": "Great Catamaran that will make you feel like a real Captain",

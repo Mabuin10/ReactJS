@@ -14,9 +14,10 @@ const CartWidget = () => {
 
     return (
         !!TotalQuantity() &&(
-        <Badge bg="success" >
+        <Badge bg="danger" >
             <Link to ="/cart">
-            <FontAwesomeIcon icon={faCartShopping} size='2xl' />
+            <FontAwesomeIcon className='icon'
+            icon={faCartShopping} size='2xl' />
             <span >{TotalQuantity()}</span>
             </Link>
         </Badge>

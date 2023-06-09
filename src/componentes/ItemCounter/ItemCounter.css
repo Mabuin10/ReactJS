@@ -1,0 +1,12 @@
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke  
+}
